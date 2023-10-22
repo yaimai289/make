@@ -1,6 +1,6 @@
 # include <stdio.h>
 
 int main(){
-    printf("This is main\n");
+    printf("World!\n");
     return 0;
 }

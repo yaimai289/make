@@ -1,13 +1,16 @@
 CC = gcc
+TARGET = main
+SRC = $(wildcard, *.c)
+OBJ = $(patsubst *.c, *.o, $(SRC))
 
 CFLAGS = -Wall
 
-objects = $(patsubst, %.c,%.o,$(wildcard, *.o))
+TARGET : $(SRC)
+	$(CC) -o $@ $<
 
-edit : $(objects)
-	CC -o $
-
+%.o : %.c
+	$(CC) $(CFLAGS) $< -o $@
 
 .PHONY : clean
-clean :
-	rm -f *.o
+clean : 
+	rm -f *.o $(TARGET)
