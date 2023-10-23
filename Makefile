@@ -5,6 +5,8 @@ OBJ = $(patsubst *.c, *.o, $(SRC))
 
 CFLAGS = -Wall
 
+ALL : $(TARGET)
+
 TARGET : $(SRC)
 	$(CC) -o $@ $<
 
