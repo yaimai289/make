@@ -1,14 +1,14 @@
 CC = gcc
 TARGET = main
-SRC = $(wildcard, *.c)
+SRC = $(wildcard *.c)
 OBJ = $(patsubst *.c, *.o, $(SRC))
 
 CFLAGS = -Wall
 
 ALL : $(TARGET)
 
-TARGET : $(SRC)
-	$(CC) -o $@ $<
+$(TARGET) : $(OBJ)
+	$(CC) -o $@ $^
 
 %.o : %.c
 	$(CC) $(CFLAGS) $< -o $@
