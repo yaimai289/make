@@ -1,11 +1,6 @@
-# include<stdio.h>
+# include <stdio.h>
 
-int hello();
-int world();
-
-int main(){
-    hello();
-    world();
-    printf("This is main\n");
+int hello(){
+    printf("Hello ");
     return 0;
 }
